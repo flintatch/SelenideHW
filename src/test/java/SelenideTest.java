@@ -11,9 +11,9 @@ public class SelenideTest {
     public void softAssertionsTest() {
         open("https://github.com/selenide/selenide");
         $("#wiki-tab").click();
-        $(".Box--condensed").$("js-wiki-more-pages-link").click();
+        $(".Box--condensed").$(".js-wiki-more-pages-link").click();
         $(".Box--condensed").shouldHave(text("SoftAssertions"));
-        $(".Box--condensed").$(byText("SoftAssertions"));
+        $(".Box--condensed").$(byText("SoftAssertions")).click();
         $(".markdown-body").$(byText("3. Using JUnit5 extend test class:")).shouldBe(visible);
     }
 }
